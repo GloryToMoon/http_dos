@@ -1,3 +1,4 @@
+import os
 import sys
 import socket
 import time
@@ -28,14 +29,18 @@ def send_packet():
 	global host, packet, verbose
 	try:
 		sock1 = socket.socket()
-		sock1.connect((host, 80))
-		sock1.send(packet.encode())
 		try:
-			data1 = sock1.recv(1024).decode()
-	        except KeyboardInterrupt:
-	                return ('killed')
+			sock1.connect((host, 80))
 		except:
-			print '[!] Server is down'
+			print '[!] Connection time out'
+		else:
+			sock1.send(packet.encode())
+			try:
+				data1 = sock1.recv(1024).decode()
+		        except KeyboardInterrupt:
+		                return ('killed')
+			except:
+				print '[!] Server is down'
 	except KeyboardInterrupt:
 		return ('killed')
 
