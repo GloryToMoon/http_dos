@@ -1,4 +1,3 @@
-import os
 import sys
 import socket
 import time
@@ -26,7 +25,7 @@ def gen_packet(host):
 	return test
 
 def send_packet():
-	global host, packet, verbose
+	global host, packet
 	try:
 		sock1 = socket.socket()
 		try:
@@ -45,7 +44,7 @@ def send_packet():
 		return ('killed')
 
 if __name__ == '__main__':
-	if len(sys.argv) == 1:
+	if len(sys.argv) != 2:
 		print help
 	else:
 		packet=gen_packet(sys.argv[1])
