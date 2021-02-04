@@ -32,10 +32,12 @@ def send_packet(host,packet,port):
 			sock1.send(packet.encode())
 			try:
 				data1 = sock1.recv(1024).decode()
+			except KeyboardInterrupt:
+				return 'killed'
 			except:
 				print ('[+] Server is down')
 	except KeyboardInterrupt:
-		return ('killed')
+		return 'killed'
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
