@@ -6,7 +6,7 @@ When sended nearly 1200 packets, apache stoping to processing packets anymore.
 ### Testing :hammer: 
 Linux apache2 - down for 70.898 seconds  
   
-![alt text](preview.gif)  
+![alt text](https://github.com/GloryToMoon/http_dos/blob/assets/preview.gif)  
   
 Thanks Nikolay for helping.
   
@@ -18,6 +18,6 @@ Thanks Nikolay for helping.
 ### Тесты :hammer: 
 Linux apache2 - упал за 70.898 секунд  
   
-![alt text](preview.gif)  
+![alt text](https://github.com/GloryToMoon/http_dos/blob/assets/preview.gif)  
   
 За помощь спасибо Николаю.
